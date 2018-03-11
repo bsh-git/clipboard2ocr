@@ -34,13 +34,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.loadLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fromClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.fromClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -129,10 +131,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(550, 286);
+            this.textBox1.TabIndex = 0;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(556, 26);
@@ -156,10 +169,17 @@
             this.loadLToolStripMenuItem.Text = "Load &File";
             this.loadLToolStripMenuItem.Click += new System.EventHandler(this.loadLToolStripMenuItem_Click);
             // 
+            // fromClipboardToolStripMenuItem
+            // 
+            this.fromClipboardToolStripMenuItem.Name = "fromClipboardToolStripMenuItem";
+            this.fromClipboardToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.fromClipboardToolStripMenuItem.Text = "Load &Clipboard";
+            this.fromClipboardToolStripMenuItem.Click += new System.EventHandler(this.LoadClipboardToolStripMenuItem);
+            // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.saveAsToolStripMenuItem.Text = "Save &As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
@@ -169,21 +189,18 @@
             this.openFileDialog1.FileName = "untitled";
             this.openFileDialog1.Filter = "Image Files|*.png;*.jpg|All Files|*.*";
             // 
-            // textBox1
+            // toolStripMenuItem2
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(550, 286);
-            this.textBox1.TabIndex = 0;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(46, 22);
+            this.toolStripMenuItem2.Text = "&Text";
             // 
-            // fromClipboardToolStripMenuItem
+            // settingsToolStripMenuItem
             // 
-            this.fromClipboardToolStripMenuItem.Name = "fromClipboardToolStripMenuItem";
-            this.fromClipboardToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.fromClipboardToolStripMenuItem.Text = "Load &Clipboard";
-            this.fromClipboardToolStripMenuItem.Click += new System.EventHandler(this.LoadClipboardToolStripMenuItem);
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(68, 22);
+            this.settingsToolStripMenuItem.Text = "&Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -226,6 +243,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem fromClipboardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 

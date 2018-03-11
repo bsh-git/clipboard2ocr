@@ -13,13 +13,14 @@ namespace clipboard2ocr
         public Form1()
         {
             InitializeComponent();
-			ApiKey = Program.ReadApiKey();
+			apiKey = Program.ReadApiKey();
 
 			AppendDebugMessage(String.Format("API key={0}", ApiKey));
 			
         }
 
-		private string ApiKey;
+        private string apiKey;
+		public string ApiKey { get { return apiKey; } }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
@@ -120,6 +121,19 @@ namespace clipboard2ocr
 		{
 			AppendDiagnosticMessage("[Debug] ", msg);
 		}
-		
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(Form2 dialog = new Form2())
+            {
+				dialog.ShowSettingsDialog(this);
+            }
+        }
+
+		public void UpdateApiKey(string newkey)
+		{
+			apiKey = newkey;
+			Program.UpdateApiKey(newkey);
+		}
     }
 }
