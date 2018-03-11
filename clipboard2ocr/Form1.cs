@@ -88,7 +88,13 @@ namespace clipboard2ocr
             Debug.WriteLine("save as");
         }
 
+		
         private async void LoadClipboardToolStripMenuItem(object sender, EventArgs e)
+		{
+			await LoadClipboard();
+		}
+			
+        private async Task LoadClipboard()
         {
             //var source = System.Windows.Clipboard.GetImage();
             IDataObject data = Clipboard.GetDataObject();
@@ -104,6 +110,10 @@ namespace clipboard2ocr
             }
 
         }
+
+		
+
+
 
 		private void AppendDiagnosticMessage(string tag, string msg)
 		{
@@ -165,6 +175,11 @@ namespace clipboard2ocr
 				textFile = openFileDialog2.FileName;
 				SaveTextToFile(textFile);
 			}
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            await LoadClipboard();
         }
     }
 }
