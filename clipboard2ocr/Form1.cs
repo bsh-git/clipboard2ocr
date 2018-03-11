@@ -22,6 +22,8 @@ namespace clipboard2ocr
         private string apiKey;
 		public string ApiKey { get { return apiKey; } }
 
+		private string textFile;
+
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
 
@@ -135,5 +137,34 @@ namespace clipboard2ocr
 			apiKey = newkey;
 			Program.UpdateApiKey(newkey);
 		}
+
+		public void SaveTextToFile(string filename)
+		{
+			try {
+				using (StreamWriter s = new StreamWriter(filename)) {
+					s.Write(textBox1.Text);
+					s.Close();
+				}
+			}
+			catch (Exception e) {
+				AppendErrorMessage(e.Message);
+			}
+		}
+
+        private void saveTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (textFile == null)
+                saveTextAsToolStripMenuItem_Click(sender, e);
+            else
+                SaveTextToFile(textFile);
+        }
+
+        private void saveTextAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog2.ShowDialog() == DialogResult.OK) {
+				textFile = openFileDialog2.FileName;
+				SaveTextToFile(textFile);
+			}
+        }
     }
 }

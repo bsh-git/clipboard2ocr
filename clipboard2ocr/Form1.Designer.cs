@@ -40,9 +40,12 @@
             this.loadLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fromClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveTextAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -183,14 +186,11 @@
             this.saveAsToolStripMenuItem.Text = "Save &As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.AddExtension = false;
-            this.openFileDialog1.FileName = "untitled";
-            this.openFileDialog1.Filter = "Image Files|*.png;*.jpg|All Files|*.*";
-            // 
             // toolStripMenuItem2
             // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveTextToolStripMenuItem,
+            this.saveTextAsToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(46, 22);
             this.toolStripMenuItem2.Text = "&Text";
@@ -201,6 +201,35 @@
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(68, 22);
             this.settingsToolStripMenuItem.Text = "&Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.AddExtension = false;
+            this.openFileDialog1.FileName = "untitled";
+            this.openFileDialog1.Filter = "Image Files|*.png;*.jpg|All Files|*.*";
+            // 
+            // saveTextToolStripMenuItem
+            // 
+            this.saveTextToolStripMenuItem.Name = "saveTextToolStripMenuItem";
+            this.saveTextToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.saveTextToolStripMenuItem.Text = "Save Text";
+            this.saveTextToolStripMenuItem.Click += new System.EventHandler(this.saveTextToolStripMenuItem_Click);
+            // 
+            // saveTextAsToolStripMenuItem
+            // 
+            this.saveTextAsToolStripMenuItem.Name = "saveTextAsToolStripMenuItem";
+            this.saveTextAsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.saveTextAsToolStripMenuItem.Text = "Save Text As";
+            this.saveTextAsToolStripMenuItem.Click += new System.EventHandler(this.saveTextAsToolStripMenuItem_Click);
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.AddExtension = false;
+            this.openFileDialog2.CheckFileExists = false;
+            this.openFileDialog2.DefaultExt = "txt";
+            this.openFileDialog2.FileName = "untitled";
+            this.openFileDialog2.Filter = "Text Files|*.txt|All Files|*.*";
+            this.openFileDialog2.ReadOnlyChecked = true;
             // 
             // Form1
             // 
@@ -245,6 +274,9 @@
         private System.Windows.Forms.ToolStripMenuItem fromClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveTextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveTextAsToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
 
