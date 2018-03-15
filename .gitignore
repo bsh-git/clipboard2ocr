@@ -1,0 +1,12 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/GoogleVisionApi/obj/Debug
+/GoogleVisionApiTests/bin/Debug
+/GoogleVisionApiTests/obj/Debug
+/clipboard2ocr/bin/Debug
+/clipboard2ocr/obj/Debug
+/packages
+/.vs/clipboard2ocr/v15
+/GoogleVisionApi/bin/Debug
